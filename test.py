@@ -1,14 +1,9 @@
-# Your Draw. You Can draw, your can play
-
-from Tkinter import *
 try:
     import simplegui
 except ImportError:
     import SimpleGUICS2Pygame.simpleguics2pygame as simplegui
 import math
 import re
-import tkFileDialog
-import ast
 
 #init
 FRAME_WIDTH  = 1000
@@ -306,9 +301,6 @@ message_timer = simplegui.create_timer(1500, message_timer_handler)
 frame.add_button("Save", save_draw)
 frame.add_button("Open", open_draw)
 
-# avoid empty tk dialog
-root = Tk()
-root.withdraw()
 
 #start
 frame.start()
